@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bar Glenns - Sportbar i Torrevieja</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fff; color: #333; }
+    header { background-color: #000; color: #fff; padding: 2rem; text-align: center; position: relative; }
+    nav { background: #f4f4f4; padding: 1rem; text-align: center; }
+    nav a { margin: 0 15px; color: #000; text-decoration: none; font-weight: bold; }
+    .hero { background: url('hero-image.jpg') center/cover no-repeat; height: 300px; display: flex; justify-content: center; align-items: center; color: #fff; font-size: 2rem; }
+    section { padding: 2rem; max-width: 900px; margin: auto; }
+    h2 { border-bottom: 2px solid #eee; padding-bottom: 0.5rem; }
+    .menu, .events, .gallery { display: grid; gap: 1rem; }
+    .gallery img { width: 100%; height: auto; border-radius: 8px; }
+    footer { background: #000; color: #fff; text-align: center; padding: 1rem; margin-top: 2rem; }
+    .lang-switcher { position: absolute; top: 1rem; right: 1rem; }
+    .lang-switcher button { background: #fff; color: #000; border: 1px solid #ccc; margin-left: 0.5rem; padding: 0.3rem 0.6rem; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="lang-switcher">
+      <button onclick="setLanguage('sv')">🇸🇪</button>
+      <button onclick="setLanguage('en')">🇬🇧</button>
+    </div>
+    <h1 id="title">Bar Glenns</h1>
+    <p id="subtitle">Din svenska sportbar i hjärtat av Torrevieja</p>
+  </header>
+  <nav>
+    <a href="#meny" id="navMenu">Meny</a>
+    <a href="#evenemang" id="navEvents">Evenemang</a>
+    <a href="#galleri" id="navGallery">Galleri</a>
+    <a href="#kontakt" id="navContact">Kontakt</a>
+  </nav>
+  <div class="hero" id="heroText">Välkommen till Glenns</div>
+  <section id="meny">
+    <h2 id="menuHeader">Meny</h2>
+    <div class="menu">
+      <p id="breakfast"><strong>Frukost:</strong> Full English Breakfast</p>
+      <p id="lunch"><strong>Lunch & Middag:</strong> Pubklassiker, vegetariskt & mer</p>
+      <p id="sunday"><strong>Söndagsmiddag:</strong> 3 rätter för 10 €, inklusive dessert</p>
+      <p id="drinks"><strong>Drycker:</strong> Öl, vin, cocktails och alkoholfria alternativ</p>
+    </div>
+  </section>
+  <section id="evenemang">
+    <h2 id="eventsHeader">Evenemang</h2>
+    <div class="events">
+      <p id="sports">⚽ Sportvisningar: Allsvenskan, Premier League m.m.</p>
+      <p id="karaoke">🎤 Karaoke & liveband varje vecka</p>
+      <p id="themes">🎉 Temakvällar & högtidsspecialer</p>
+    </div>
+  </section>
+  <section id="galleri">
+    <h2 id="galleryHeader">Galleri</h2>
+    <div class="gallery">
+      <img src="bar1.jpg" alt="Barinteriör">
+      <img src="event1.jpg" alt="Karaokekväll">
+      <img src="food1.jpg" alt="Pubrätt">
+    </div>
+  </section>
+  <section id="kontakt">
+    <h2 id="contactHeader">Kontakt & Hitta Hit</h2>
+    <p id="address">📍 Placa Tolosa 16, El Chaparral, Torrevieja</p>
+    <p>📞 Telefon: [Telefonnummer]</p>
+    <p>✉️ E-post: [info@barglenns.es]</p>
+    <p id="hours">🕒 Öppet: Mån–Tor 13–24, Fre–Sön 13–01</p>
+    <iframe src="https://maps.google.com/maps?q=Placa%20Tolosa%2016%2C%20Torrevieja&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+  </section>
+  <footer>
+    <p>&copy; 2025 Bar Glenns | Webbsida skapad av [Ditt Företagsnamn]</p>
+  </footer>
+
+  <script>
+    const translations = {
+      sv: {
+        title: "Bar Glenns",
+        subtitle: "Din svenska sportbar i hjärtat av Torrevieja",
+        navMenu: "Meny",
+        navEvents: "Evenemang",
+        navGallery: "Galleri",
+        navContact: "Kontakt",
+        heroText: "Välkommen till Glenns",
+        menuHeader: "Meny",
+        breakfast: "Frukost: Full English Breakfast",
+        lunch: "Lunch & Middag: Pubklassiker, vegetariskt & mer",
+        sunday: "Söndagsmiddag: 3 rätter för 10 €, inklusive dessert",
+        drinks: "Drycker: Öl, vin, cocktails och alkoholfria alternativ",
+        eventsHeader: "Evenemang",
+        sports: "⚽ Sportvisningar: Allsvenskan, Premier League m.m.",
+        karaoke: "🎤 Karaoke & liveband varje vecka",
+        themes: "🎉 Temakvällar & högtidsspecialer",
+        galleryHeader: "Galleri",
+        contactHeader: "Kontakt & Hitta Hit",
+        address: "📍 Placa Tolosa 16, El Chaparral, Torrevieja",
+        hours: "🕒 Öppet: Mån–Tor 13–24, Fre–Sön 13–01"
+      },
+      en: {
+        title: "Bar Glenns",
+        subtitle: "Your Swedish sports bar in the heart of Torrevieja",
+        navMenu: "Menu",
+        navEvents: "Events",
+        navGallery: "Gallery",
+        navContact: "Contact",
+        heroText: "Welcome to Glenns",
+        menuHeader: "Menu",
+        breakfast: "Breakfast: Full English Breakfast",
+        lunch: "Lunch & Dinner: Pub classics, vegetarian options & more",
+        sunday: "Sunday Dinner: 3 courses for €10, dessert included",
+        drinks: "Drinks: Beer, wine, cocktails and non-alcoholic options",
+        eventsHeader: "Events",
+        sports: "⚽ Sports: Allsvenskan, Premier League and more",
+        karaoke: "🎤 Karaoke & live bands every week",
+        themes: "🎉 Theme nights & holiday specials",
+        galleryHeader: "Gallery",
+        contactHeader: "Contact & Find Us",
+        address: "📍 Placa Tolosa 16, El Chaparral, Torrevieja",
+        hours: "🕒 Open: Mon–Thu 13–24, Fri–Sun 13–01"
+      }
+    };
+
+    function setLanguage(lang) {
+      for (const id in translations[lang]) {
+        const element = document.getElementById(id);
+        if (element) element.textContent = translations[lang][id];
+      }
+    }
+  </script>
+</body>
+</html>
